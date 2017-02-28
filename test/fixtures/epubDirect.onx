@@ -63,7 +63,7 @@
   <AudienceCode>01</AudienceCode>
   <OtherText>
    <TextTypeCode>01</TextTypeCode>
-   <Text textformat="05"><![CDATA[<p>Sample description.</p>
+   <Text textformat="05"><![CDATA[<p>Sample description.]]</p>
 <p>Features</p>
 <p>Step by step guide</p>
 <p>Full colour illustrations: all the pictures have been selected following a period of testing.</p>

@@ -31,7 +31,7 @@
           <TitleType>01</TitleType>
           <TitleElement>
             <TitleElementLevel>02</TitleElementLevel>
-            <TitleText><![CDATA[Reliefs]]></TitleText>
+            <TitleText><![CDATA[Collection name]]></TitleText>
           </TitleElement>
         </TitleDetail>
       </Collection>
@@ -39,7 +39,7 @@
         <TitleType>01</TitleType>
         <TitleElement>
           <TitleElementLevel>01</TitleElementLevel>
-          <TitleText><![CDATA[Six minutes]]></TitleText>
+          <TitleText><![CDATA[The Title]]></TitleText>
         </TitleElement>
       </TitleDetail>
       <Contributor>
@@ -49,7 +49,7 @@
         <PersonNameInverted>AuthorLast, AuthorFirst</PersonNameInverted>
         <NamesBeforeKey>AuthorFirst</NamesBeforeKey>
         <KeyNames>AuthorLast</KeyNames>
-        <BiographicalNote><![CDATA[]]></BiographicalNote>
+        <BiographicalNote><![CDATA[bio notes]]></BiographicalNote>
         <ContributorPlace>
           <ContributorPlaceRelator>08</ContributorPlaceRelator>
           <CountryCode>CA</CountryCode>
@@ -380,7 +380,7 @@
           <PriceType>04</PriceType>
           <PriceQualifier>05</PriceQualifier>
           <PriceStatus>02</PriceStatus>
-          <PriceAmount>13,99</PriceAmount>
+          <PriceAmount>13.99</PriceAmount>
           <CurrencyCode>EUR</CurrencyCode>
           <Territory>
             <CountriesIncluded>LU</CountriesIncluded>
@@ -395,6 +395,10 @@
           <Territory>
             <CountriesIncluded>MC</CountriesIncluded>
           </Territory>
+          <PriceDate>
+            <PriceDateRole>14</PriceDateRole>
+            <Date>20150527T000000-0400</Date>
+          </PriceDate>
         </Price>
         <Price>
           <PriceType>04</PriceType>

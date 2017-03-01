@@ -822,5 +822,54 @@
         </Price>
       </SupplyDetail>
     </ProductSupply>
+    <ProductSupply>
+      <Market>
+        <Territory>
+          <CountriesIncluded>AD AR AT BE BG BO BR CA CL CO CR CY CZ DE DO EC EE ES FI FR GF GR GT HN HU IE IT LT LU LV MC MT NI NL PA PE PL PT PY RO SI SK SV US VE</CountriesIncluded>
+        </Territory>
+        <SalesRestriction>
+          <SalesRestrictionType>06</SalesRestrictionType>
+        </SalesRestriction>
+      </Market>
+      <MarketPublishingDetail>
+        <MarketPublishingStatus>04</MarketPublishingStatus>
+        <MarketDate>
+          <MarketDateRole>01</MarketDateRole>
+          <DateFormat>00</DateFormat>
+          <Date>20150527</Date>
+        </MarketDate>
+      </MarketPublishingDetail>
+      <SupplyDetail>
+        <Supplier>
+          <SupplierRole>01</SupplierRole>
+          <SupplierIdentifier>
+            <SupplierIDType>01</SupplierIDType>
+            <IDTypeName>Proprietary</IDTypeName>
+            <IDValue>345</IDValue>
+          </SupplierIdentifier>
+          <SupplierName>The Supplier</SupplierName>
+          <Website>
+            <WebsiteRole>01</WebsiteRole>
+            <WebsiteLink>http://www.supplier.com</WebsiteLink>
+          </Website>
+        </Supplier>
+        <ProductAvailability>20</ProductAvailability>
+        <SupplyDate>
+          <SupplyDateRole>08</SupplyDateRole>
+          <DateFormat>14</DateFormat>
+          <Date>20150527T000000-0400</Date>
+        </SupplyDate>
+        <Price>
+          <PriceType>04</PriceType>
+          <PriceQualifier>05</PriceQualifier>
+          <PriceStatus>02</PriceStatus>
+          <PriceAmount>13,99</PriceAmount>
+          <CurrencyCode>EUR</CurrencyCode>
+          <Territory>
+            <CountriesIncluded>BG</CountriesIncluded>
+          </Territory>
+        </Price>
+      </SupplyDetail>
+    </ProductSupply>
   </Product>
 </ONIXMessage>

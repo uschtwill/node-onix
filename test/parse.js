@@ -79,4 +79,17 @@ describe('Parsing ONIX 3', function() {
       product.productSupply[0].marketPublishingDetail[0].dates[0].role.should.eql(1);
       product.productSupply[0].marketPublishingDetail[0].dates[0].date.should.eql(new Date(2015, 4, 27));
     });
+
+    it('should find the subjects', function() {
+      main = product.description.subjects[0];
+      main.scheme.should.eql('10');
+      main.code.should.eql('FIC050000');
+      main.main.should.be.true;
+
+      nonMain = product.description.subjects[1];
+      nonMain.main.should.be.false;
+
+      keywords = product.description.subjects[3];
+      keywords.text.includes('keyword1').should.be.true;
+    });
 });

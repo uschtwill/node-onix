@@ -64,6 +64,10 @@ describe('Parsing ONIX 3', function() {
       prices[2].dates[0].date.should.eql(new Date(2015, 4, 27))
     });
 
+    it('shoudl find market territory', function() {
+      product.productSupply[0].market[0].territory.countries.includes('BE').should.be.true;
+    });
+
     it('should find sales restrictions for product supplies', function() {
       noRestrictions = product.productSupply[0].market[0].salesRestrictions;
       restrictions = product.productSupply[1].market[0].salesRestrictions;

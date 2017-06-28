@@ -105,4 +105,14 @@ describe('Parsing ONIX 3', function() {
       relatedProducts[0].productIdentifiers[0].value.should.eql('some_other_id')
       relatedProducts[0].productForm.should.eql('EA')
     });
+
+    it('should find the product form', function() {
+      product.description.productForm.should.eql('EA');
+    });
+
+    it('should find the product form details', function() {
+      formDetails = product.description.productFormDetails
+      formDetails.length.should.eql(2);
+      formDetails[0].should.eql('E101');
+    });
 });

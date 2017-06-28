@@ -64,7 +64,7 @@ describe('Parsing ONIX 3', function() {
       prices[2].dates[0].date.should.eql(new Date(2015, 4, 27))
     });
 
-    it('shoudl find market territory', function() {
+    it('should find market territory', function() {
       product.productSupply[0].market[0].territory.countries.includes('BE').should.be.true;
     });
 
@@ -95,5 +95,14 @@ describe('Parsing ONIX 3', function() {
 
       keywords = product.description.subjects[3];
       keywords.text.includes('keyword1').should.be.true;
+    });
+
+    it('should find the related products', function() {
+      relatedProducts = product.relatedMaterial.relatedProducts;
+      relatedProducts.length.should.eql(3);
+      relatedProducts[0].productRelationCodes[0].should.eql(31)
+      relatedProducts[0].productIdentifiers[0].type.should.eql(1)
+      relatedProducts[0].productIdentifiers[0].value.should.eql('some_other_id')
+      relatedProducts[0].productForm.should.eql('EA')
     });
 });

@@ -6,7 +6,7 @@ var onix = require('../');
 
 describe('Parsing', function () {
     var EPUBDIRECT = fs.readFileSync(path.join(__dirname, './fixtures/epubDirect.onx'), { encoding: 'utf-8' });
-    var feed
+    var feed;
 
     it('should correctly parse xml', function() {
         feed = onix.parse(EPUBDIRECT);
@@ -114,5 +114,13 @@ describe('Parsing ONIX 3', function() {
       formDetails = product.description.productFormDetails
       formDetails.length.should.eql(2);
       formDetails[0].should.eql('E101');
+    });
+
+    it('should find the description text for the product', function() {
+      descriptionText = product.collateralDetail.textContent.find(function(tc) {
+        return tc.type == '03';
+      }).text;
+      descriptionText.should.be.an.instanceOf(String).and.have.lengthOf(28);
+      descriptionText.should.equal('this book is very very good.')
     });
 });

@@ -10,8 +10,8 @@ describe('Parsing', function () {
 
     it('should correctly parse xml', function() {
         feed = onix.parse(EPUBDIRECT);
-        console.log(JSON.stringify(feed, null, 4));
-        console.log(onix.create(feed));
+        // console.log(JSON.stringify(feed, null, 4));
+        // console.log(onix.create(feed));
     });
 });
 
@@ -100,10 +100,10 @@ describe('Parsing ONIX 3', function() {
     it('should find the related products', function() {
       relatedProducts = product.relatedMaterial.relatedProducts;
       relatedProducts.length.should.eql(3);
-      relatedProducts[0].productRelationCodes[0].should.eql(31)
-      relatedProducts[0].productIdentifiers[0].type.should.eql(1)
-      relatedProducts[0].productIdentifiers[0].value.should.eql('some_other_id')
-      relatedProducts[0].productForm.should.eql('EA')
+      relatedProducts[0].productRelationCodes[0].should.eql(31);
+      relatedProducts[0].productIdentifiers[0].type.should.eql(1);
+      relatedProducts[0].productIdentifiers[0].value.should.eql('some_other_id');
+      relatedProducts[0].productForm.should.eql('EA');
     });
 
     it('should find the product form', function() {
@@ -111,7 +111,7 @@ describe('Parsing ONIX 3', function() {
     });
 
     it('should find the product form details', function() {
-      formDetails = product.description.productFormDetails
+      formDetails = product.description.productFormDetails;
       formDetails.length.should.eql(2);
       formDetails[0].should.eql('E101');
     });
@@ -121,6 +121,12 @@ describe('Parsing ONIX 3', function() {
         return tc.type == '03';
       }).text;
       descriptionText.should.be.an.instanceOf(String).and.have.lengthOf(28);
-      descriptionText.should.equal('this book is very very good.')
+      descriptionText.should.equal('this book is very very good.');
+    });
+
+    it('should find the publishing dates', function() {
+      product.publishingDetail.dates.length.should.equal(4);
+      product.publishingDetail.dates[0].role.should.equal(1);
+      Date.parse(product.publishingDetail.dates[0].date).should.equal(Date.parse('2015-05-27 00:00:00'))
     });
 });

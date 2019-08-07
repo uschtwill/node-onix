@@ -129,4 +129,23 @@ describe('Parsing ONIX 3', function() {
       product.publishingDetail.dates[0].role.should.equal(1);
       Date.parse(product.publishingDetail.dates[0].date).should.equal(Date.parse('2015-05-27 00:00:00'))
     });
+
+    it('should find the supporting resources', function() {
+      product.collateralDetail.supportingResource.length.should.equal(6);
+      product.collateralDetail.supportingResource[0].resourceContentType.should.equal(1);
+      product.collateralDetail.supportingResource[0].contentAudience.should.equal(0);
+      product.collateralDetail.supportingResource[0].resourceMode.should.equal(3);
+      product.collateralDetail.supportingResource[0].resourceFeature.length.should.equal(1);
+      product.collateralDetail.supportingResource[0].resourceFeature[0].resourceFeatureType.should.equal(2);
+      product.collateralDetail.supportingResource[0].resourceFeature[0].featureValue.should.equal('Couverture principale');
+      product.collateralDetail.supportingResource[0].resourceVersion.length.should.equal(1);
+      product.collateralDetail.supportingResource[0].resourceVersion[0].resourceForm.should.equal(2);
+      product.collateralDetail.supportingResource[0].resourceVersion[0].resourceVersionFeature.length.should.equal(4);
+      product.collateralDetail.supportingResource[0].resourceVersion[0].resourceVersionFeature[0].resourceVersionFeatureType.should.equal(4);
+      product.collateralDetail.supportingResource[0].resourceVersion[0].resourceVersionFeature[0].featureValue.should.equal('filename.jpg');
+      product.collateralDetail.supportingResource[0].resourceVersion[0].resourceLink.should.equal('https://www.domain.com/image.jpg');
+      product.collateralDetail.supportingResource[0].resourceVersion[0].contentDate.length.should.equal(1);
+      product.collateralDetail.supportingResource[0].resourceVersion[0].contentDate[0].contentDateRole.should.equal(17);
+      product.collateralDetail.supportingResource[0].resourceVersion[0].contentDate[0].date.should.equal('20150507T174343-0400');
+    });
 });

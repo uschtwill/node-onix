@@ -27,6 +27,10 @@
       <EpubTechnicalProtection>02</EpubTechnicalProtection>
       <Collection>
         <CollectionType>10</CollectionType>
+        <CollectionIdentifier>
+          <CollectionIDType>01</CollectionIDType>
+          <IDValue>CollectionID</IDValue>
+        </CollectionIdentifier>
         <TitleDetail>
           <TitleType>01</TitleType>
           <TitleElement>

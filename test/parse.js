@@ -148,4 +148,17 @@ describe('Parsing ONIX 3', function() {
       product.collateralDetail.supportingResource[0].resourceVersion[0].contentDate[0].contentDateRole.should.equal(17);
       product.collateralDetail.supportingResource[0].resourceVersion[0].contentDate[0].date.should.equal('20150507T174343-0400');
     });
+
+    it('should find the collection', function() {
+      product.description.collection.length.should.equal(1);
+      product.description.collection[0].collectionType.should.equal(10);
+      product.description.collection[0].collectionIdentifier.length.should.equal(1);
+      product.description.collection[0].collectionIdentifier[0].collectionIDType.should.equal(1);
+      product.description.collection[0].collectionIdentifier[0].idValue.should.equal('CollectionID');
+      product.description.collection[0].titleDetail.length.should.equal(1);
+      product.description.collection[0].titleDetail[0].titleType.should.equal(1);
+      product.description.collection[0].titleDetail[0].titleElement.length.should.equal(1);
+      product.description.collection[0].titleDetail[0].titleElement[0].titleElementLevel.should.equal(2);
+      product.description.collection[0].titleDetail[0].titleElement[0].titleText.should.equal('Collection name');
+    });
 });

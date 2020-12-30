@@ -11,12 +11,13 @@
     },
     "dependencies": {
         "lodash": "^3.9.3",
-        "xml-schema": "git://github.com/christianroy/xml-schema.git",
-        "subjects-utils": "0.0.1"
+        "subjects-utils": "0.0.1",
+        "xml-schema": "git://github.com/christianroy/xml-schema.git"
     },
     "devDependencies": {
         "mocha": "2.2.1",
-        "should": "5.2.0"
+        "should": "5.2.0",
+        "standard-version": "^9.1.0"
     },
     "scripts": {
         "test": "node_modules/.bin/mocha --reporter spec --timeout 15000"
